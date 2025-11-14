@@ -1,15 +1,16 @@
 from sklearn.linear_model import LinearRegression
+from sklearn.datasets import load_iris
 import pandas as pd
 import joblib
 
+
 def train():
-    df = pd.DataFrame({
-        'x':[1,2,3,4],
-        'y': [2,4,6,8]
-    })
+    data = load_iris()
     
-    X = df[['x']]
-    y = df['y']
+    
+    
+    X = data.features
+    y = data.target
     
     model = LinearRegression()
     model.fit(X,y)
