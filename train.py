@@ -9,7 +9,7 @@ def train():
     
     
     
-    X = data.features
+    X = data.data
     y = data.target
     
     model = LinearRegression()
